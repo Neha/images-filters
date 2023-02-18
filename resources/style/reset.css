@@ -1,0 +1,80 @@
+/* basic reset */
+
+:root{
+    --font-family: arial, sans-serif;
+    --base-color: #000;
+    --blend-mode:none;
+    --base-color:#E1523D;
+    --white-color: #fff;
+    --blend-base-color: #ED8B16;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font:1rem var(--font-family);
+    background-color: var(--base-color);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 34px;
+    color: var(--white-color);
+    margin-top: 30px;
+}
+
+fieldset {
+    border: 0;
+    margin: 10px;
+}
+
+label{
+    padding: 0 10px 0 0;
+    color:var(--white-color);
+}
+
+legend{
+    display: none;
+}
+
+
+section{
+    width: 400px;
+    background: var(--blend-base-color);
+    margin: 20px 0;
+}
+
+section > img {
+    mix-blend-mode: var(--blend-mode);
+    
+}
+
+:root:has(#screen:checked){
+    --blend-mode:lighten ;
+}
+
+:root:has(#dark:checked){
+    --blend-mode:darken ;
+}
+
+:root:has(#reset:checked){
+    --blend-mode:none; 
+}
+
+
+:root:has(#saturation:checked){
+    --blend-mode:saturation ;
+}
+
+
+
+
+
